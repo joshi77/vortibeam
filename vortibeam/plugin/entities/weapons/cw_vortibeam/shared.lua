@@ -75,6 +75,8 @@ function SWEP:PrimaryAttack()
 			self.Owner:SetForcedAnimation("zapattack1", 1.5);
 		end;
 		
+		self.Owner:SetCycle(0); // stops the animation starting at random points in the sequence, credit to Viz for this fix
+		
 		local chargeSound = CreateSound(self.Owner, "npc/vort/attack_charge.wav");
 		chargeSound:Play();
 		
